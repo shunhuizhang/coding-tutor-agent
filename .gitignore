@@ -10,11 +10,13 @@ backend/.env
 !*.env.example
 !*.env.template
 
-# ---- 数据库（含用户数据：密码哈希、对话记录） ----
+# ---- 数据库 ----
+# 默认忽略所有数据库；backend/app.db 为清理后的纯净库（仅 demo 测试用户、无对话记录），随仓库发布便于开箱即用
 *.db
 *.db-journal
 *.sqlite
 *.sqlite3
+!backend/app.db
 
 # ---- Python ----
 __pycache__/
