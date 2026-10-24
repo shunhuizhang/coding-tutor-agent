@@ -1,0 +1,39 @@
+# ============================================
+# 编程答疑 Agent · Git 忽略规则
+# 安全红线：密钥与用户数据绝不入库
+# ============================================
+
+# ---- 密钥与配置（绝不提交） ----
+.env
+backend/.env
+*.env
+!*.env.example
+!*.env.template
+
+# ---- 数据库（含用户数据：密码哈希、对话记录） ----
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+.python-version
+
+# ---- 测试/临时文件 ----
+_*.py
+_*.txt
+_*.js
+tmp_*
+
+# ---- 编辑器 / IDE / 系统 ----
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
